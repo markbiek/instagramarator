@@ -6,11 +6,11 @@
     "version": "1.0",
     "permissions": [
         "tabs", 
-        "http://instagram.com/*"
+        "https://instagram.com/*"
     ],
     "content_scripts": [
         {
-            "matches": ["http://instagram.com/*"],
+            "matches": ["https://instagram.com/*"],
             "js": ["jquery.min.js", "inject.js"]
         }
     ]

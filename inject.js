@@ -23,7 +23,7 @@
     };
 
     var profileLinkExists = function() {
-        return $('.-cx-PRIVATE-ProfilePage__editProfileLink').length > 0;
+        return $('.-cx-PRIVATE-ProfilePage__username').length > 0;
     };
 
     var findImageAndDownload = function() {

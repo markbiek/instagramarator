@@ -45,8 +45,31 @@
     };
 
     $(document).ready( function() {
+        $(document).on('mouseenter', '.-cx-PRIVATE-PostsGridItem__root', function(e) {
+            var imgSrc = $('img', this).attr('src');
+            console.log(imgSrc);
+
+            var $img = $('<img />').css( {
+                'z-index': 1000,
+                'display': 'block',
+                'position': 'absolute',
+                'top': '0px',
+                'left': '0px',
+                'width': '32px',
+                'height': '32px',
+                'border': '1px solid #ccc'
+            }).attr('src', imgSrc);
+
+            $('.-cx-PRIVATE-PostsGridItem__postInfo').append($img);
+        });
+
+        $(document).on('mouseleave', '.-cx-PRIVATE-PostsGridItem__root,.-cx-PRIVATE-PostsGridItem__postInfo', function(e) {
+        });
+
+        /*
         if(!profileLinkExists()) {
             findImageAndDownload();
         }
+        */
     });
 })(jQuery);
